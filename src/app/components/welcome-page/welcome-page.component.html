@@ -1,0 +1,14 @@
+<div class="page">
+  <div class="container">
+    <header>
+      <h1>Join Chat</h1>
+    </header>
+    <div class="online-users">
+      <p>Online users: <span id="online-users-count">{{ onlineUsers$ | async }}</span></p>
+    </div>
+    <form class="join-chat-form">
+      <input type="text" id="username" placeholder="Enter username" [(ngModel)]="userName" [ngModelOptions]="{standalone: true}">
+      <button type="button" (click)="joinChat()">Join Chat</button>
+    </form>
+  </div>
+</div>
